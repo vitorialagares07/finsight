@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Bank Vitória Lagares</title>
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="brand">
+                <h1>Bank Vitória Lagares</h1>
+                <p>FinSight</p>
+            </div>
+        <nav class="navigation">
+            <a href="#visao-geral" class="active">Visão geral</a>
+            <a href="#transacoes">Transações</a>
+            <a href="#analises">Análise Financeira</a>
+        </nav>        
+        </aside>
+    <main class="main-content">
+        <header class="topbar">
+            <div>
+                <h2>Visão geral</h2>
+                <p>Acompanhe suas movimentações financeiras.</p>
+            </div>
+        </header>
+        <section id="visao-geral" class="summary">
+        
+            <article class="summary-card">
+                <h3>Saldo líquido</h3>
+                <p class="value">R$ 0,00</p>
+            </article>
+
+            <article class="summary-card">
+                <h3>Total de depósitos</h3>
+                <p class="value">R$ 0,00</p>
+            </article>
+
+            <article class="summary-card">
+                <h3>Total de saques</h3>
+                <p class="value">R$ 0,00</p>
+            </article>
+
+            <article class="summary-card">
+                <h3>Transações</h3>
+                <p class="value">0</p>
+            </article>
+        
+        </section>
+
+        <section id="transacoes" class="transactions">
+            
+            <div class="section-header">
+                <div>
+                    <h2>Transações recentes</h2>
+                    <p>Confira as últimas movimentações financeiras.</p>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Descrição</th>
+                            <th>Tipo</th>
+                            <th>Data</th>
+                            <th>Valor</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="transactions-list">
+                        <tr>
+                            <td>Salário</td>
+                            <td><span class="transaction-type deposit">Depósito</span></td>
+                            <td>10/10/2026</td>
+                            <td class="deposit-value">R$ 3.500,00</td>
+                        </tr>
+
+                        <tr>
+                            <td>Pagamento de conta</td>
+                            <td><span class="transaction-type withdrawal">Saque</span></td>
+                            <td>09/10/2026</td>
+                            <td class="withdrawal-value">R$ 250,00</td>
+                        </tr>
+
+                        <tr>
+                            <td>Transferência recebida</td>
+                            <td><span class="transaction-type deposit">Depósito</span></td>
+                            <td>08/10/2026</td>
+                            <td class="deposit-value">R$ 800,00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+        </section>
+
+        <section id="analises" class="analytics">
+                
+        <div class="section-header">
+            <div>
+                <h2>Análise financeira</h2>
+                <p>Comparativo mensal de depósitos e saques.</p>
+            </div>
+        </div>
+
+        <div class="chart-card">
+            <div class="chart-legend">
+                <span><i class="legend-color deposit-bg"></i>Depósitos</span>
+                <span><i class="legend-color withdrawal-bg"></i>Saques</span>
+            </div>
+
+            <div class="chart" aria-label="Gráfico ilustrativo de depósitos e saques dos últimos seis meses">
+                <div class="chart-grid">
+                    <div class="chart-row">
+                        <span class="month">Mai</span>
+                        <div class="bars">
+                            <div class="bar deposit-bar" style="height: 70%"></div>
+                            <div class="bar withdrawal-bar" style="height: 35%"></div>
+                        </div>
+                    </div>
+
+                    <div class="chart-row">
+                        <span class="month">Jun</span>
+                        <div class="bars">
+                            <div class="bar deposit-bar" style="height: 85%"></div>
+                            <div class="bar withdrawal-bar" style="height: 45%"></div>
+                        </div>
+                    </div>
+
+                    <div class="chart-row">
+                        <span class="month">Jul</span>
+                        <div class="bars">
+                            <div class="bar deposit-bar" style="height: 55%"></div>
+                            <div class="bar withdrawal-bar" style="height: 40%"></div>
+                        </div>
+                    </div>
+
+                    <div class="chart-row">
+                        <span class="month">Ago</span>
+                        <div class="bars">
+                            <div class="bar deposit-bar" style="height: 90%"></div>
+                            <div class="bar withdrawal-bar" style="height: 50%"></div>
+                        </div>
+                    </div>
+
+                    <div class="chart-row">
+                        <span class="month">Set</span>
+                        <div class="bars">
+                            <div class="bar deposit-bar" style="height: 75%"></div>
+                            <div class="bar withdrawal-bar" style="height: 30%"></div>
+                        </div>
+                    </div>
+
+                    <div class="chart-row">
+                        <span class="month">Out</span>
+                        <div class="bars">
+                            <div class="bar deposit-bar" style="height: 95%"></div>
+                            <div class="bar withdrawal-bar" style="height: 45%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </section>
+    </main>    
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

@@ -1,0 +1,345 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #111827;
+    color: #F9FAFB;
+}
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    flex-shrink: 0;
+    padding: 28px 20px;
+    background-color: #0B1220;
+    border-right: 1px solid #273449;
+}
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+    padding: 32px;
+}
+
+.brand h1 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.brand p {
+    color: #60A5FA;
+    margin-top: 8px;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 40px;
+}
+
+.navigation a {
+    padding: 12px;
+    border-radius: 6px;
+    color: #9CA3AF;
+    text-decoration: none;
+}
+
+.navigation a:hover,
+.navigation a.active {
+    background-color: #1E293B;
+    color: #FFFFFF;
+}
+
+.topbar {
+    margin-bottom: 28px;
+}
+
+.topbar h2 {
+    margin: 0 0 8px;
+}
+
+.topbar p {
+    color: #9CA3AF;
+    margin: 0;
+}
+
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .main-content {
+        padding: 24px;
+    }
+
+    .sidebar {
+        width: 220px;
+    }
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 20px;
+        border-right: none;
+        border-bottom: 1px solid #273449;
+    }
+
+    .navigation {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+
+    .main-content {
+        padding: 20px 16px;
+    }
+}
+
+
+/* Cartões de resumo financeiro */
+.summary {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.summary-card {
+    background-color: #1E293B;
+    border: 1px solid #273449;
+    border-radius: 10px;
+    padding: 22px;
+    min-width: 0;
+}
+
+.summary-card h3 {
+    color: #9CA3AF;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0 0 16px;
+}
+
+.summary-card .value {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+/* Cartões em telas menores */
+@media (max-width: 1024px) {
+    .summary {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Cartões em celulares pequenos */
+@media (max-width: 420px) {
+    .summary {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Histórico de transações */
+.transactions {
+    margin-top: 32px;
+}
+
+.section-header {
+    margin-bottom: 18px;
+}
+
+.section-header h2 {
+    font-size: 20px;
+    margin: 0 0 8px;
+}
+
+.section-header p {
+    color: #9CA3AF;
+    font-size: 14px;
+    margin: 0;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    background-color: #1E293B;
+    border: 1px solid #273449;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 18px 20px;
+    border-bottom: 1px solid #273449;
+    white-space: nowrap;
+}
+
+th {
+    color: #9CA3AF;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+td {
+    font-size: 14px;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr:hover {
+    background-color: #263449;
+}
+
+.transaction-type {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.deposit {
+    color: #34D399;
+}
+
+.withdrawal {
+    color: #F87171;
+}
+
+.transaction-type.deposit {
+    background-color: #064E3B;
+}
+
+.transaction-type.withdrawal {
+    background-color: #7F1D1D;
+}
+
+.deposit-value {
+    color: #34D399;
+}
+
+.withdrawal-value {
+    color: #F87171;
+}
+
+
+/* Análise financeira */
+.analytics {
+    margin-top: 32px;
+}
+
+.chart-card {
+    padding: 24px;
+    background-color: #1E293B;
+    border: 1px solid #273449;
+    border-radius: 10px;
+}
+
+.chart-legend {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 28px;
+    color: #D1D5DB;
+    font-size: 13px;
+}
+
+.chart-legend span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.legend-color {
+    width: 10px;
+    height: 10px;
+    border-radius: 3px;
+}
+
+.deposit-bg,
+.deposit-bar {
+    background-color: #34D399;
+}
+
+.withdrawal-bg,
+.withdrawal-bar {
+    background-color: #F87171;
+}
+
+.chart-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 16px;
+    min-height: 240px;
+}
+
+.chart-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+}
+
+.bars {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 6px;
+    width: 100%;
+    height: 210px;
+    border-bottom: 1px solid #475569;
+}
+
+.bar {
+    width: min(38%, 32px);
+    min-height: 4px;
+    border-radius: 5px 5px 0 0;
+}
+
+.month {
+    color: #9CA3AF;
+    font-size: 12px;
+}
+
+@media (max-width: 600px) {
+    .chart-card {
+        padding: 16px 10px;
+    }
+
+    .chart-grid {
+        gap: 6px;
+    }
+
+    .bars {
+        gap: 3px;
+        height: 170px;
+    }
+
+    .month {
+        font-size: 11px;
+    }
+}
